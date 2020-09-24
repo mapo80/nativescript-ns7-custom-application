@@ -17,7 +17,7 @@ module.exports = env => {
     env.entries = env.entries || {};
 
     if (platform === 'android') {
-        env.entries.application = "./src/app/application.android";    
+        env.entries.application = "./app/application.android";    
     }
     
     return webpackConfig(env);
