@@ -84,7 +84,10 @@ module.exports = env => {
   }
   const entryModule = `${nsWebpack.getEntryModule(appFullPath, platform)}.ts`;
   const entryPath = `.${sep}${entryModule}`;
-  const entries = { bundle: entryPath };
+  const entries = { 
+    bundle: entryPath,
+    application: "./app/application.android",
+  };
   const areCoreModulesExternal =
     Array.isArray(env.externals) &&
     env.externals.some(e => e.indexOf('@nativescript') > -1);
